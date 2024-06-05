@@ -54,7 +54,6 @@ function QuestionsAnswers(props) {
   return (
     <div className="QuestionsAnswers w-full">
       <p>Question: {currentQuestionIndex + 1}</p>
-      <p>Time Elapsed: {props.timeInMinutes} minutes {props.timer % 60} seconds</p>
       <p className="font-bold text-2xl mb-4 text-center">
         {props.questionsList[currentQuestionIndex].question}
       </p>
