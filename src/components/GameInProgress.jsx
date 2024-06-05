@@ -60,7 +60,6 @@ function GameInProgress(props) {
             <p>
               Your score is: {currentScore} / {props.questionsList.length}
             </p>
-            <p>Time Elapsed: {timeInMinutes} minutes {timer % 60} seconds</p>
           </div>
           <div className="flex justify-center">
             <button className="m-2" onClick={() => returnHome()}>
