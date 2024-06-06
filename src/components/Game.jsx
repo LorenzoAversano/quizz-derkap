@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import ChooseDifficulty from "./ChooseDifficulty";
 import ChooseCategory from "./ChooseCategory";
 
-function Game() {
+function Game({ email }) { // Recevoir l'email en prop
   const [questionsList, setQuestionsList] = useState([]);
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [difficulty, setDifficulty] = useState("");
@@ -59,6 +59,7 @@ function Game() {
       <h1 className="font-bold mb-4 text-5xl">Quizz</h1>
       {!isGameStarted && (
         <StartGame
+          email={email} // Passer l'email en prop à StartGame
           setIsGameStarted={setIsGameStarted}
           QUESTIONS_AMOUNT={QUESTIONS_AMOUNT}
         />
